@@ -14,7 +14,6 @@ const App: FC = () => {
           If you're reading this in Fraunces serif on a warm paper background
           with a rust accent on "Advisor" — Tailwind is wired up correctly.
         </p>
-
         <div className="mt-12 grid grid-cols-3 gap-4">
           <div className="bg-paper-warm border border-rule p-6">
             <p className="font-mono text-xs uppercase tracking-widest text-ink-faint mb-2">
