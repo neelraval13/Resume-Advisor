@@ -1,30 +1,29 @@
 @import "tailwindcss";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/jetbrains-mono";
 
 /* ─── Design tokens — editorial aesthetic ──────────────────────────── */
 @theme {
     /* Color palette */
-    --color-paper: #f1ede4; /* warm paper background */
-    --color-paper-warm: #fbf8f0; /* slightly warmer surface */
-    --color-ink: #17140f; /* near-black text */
-    --color-ink-muted: #5c564a; /* secondary text */
-    --color-ink-faint: #8a8478; /* tertiary text, captions */
-    --color-rust: #a8421c; /* primary accent */
-    --color-rust-deep: #6b2810; /* dark rust for emphasis text */
-    --color-rust-pale: #f5e1d8; /* rust tint background */
-    --color-amber-pale: #f5ebd8; /* amber tint background */
-    --color-amber-deep: #6b4a10; /* amber emphasis text */
-    --color-olive-pale: #e8ebd6; /* sage tint background */
-    --color-olive-deep: #3d441a; /* olive emphasis text */
-    --color-rule: #d3ccb9; /* hairline rules and borders */
-    --color-rule-soft: #edebdd; /* soft borders, dividers */
+    --color-paper: #f1ede4;
+    --color-paper-warm: #fbf8f0;
+    --color-ink: #17140f;
+    --color-ink-muted: #5c564a;
+    --color-ink-faint: #8a8478;
+    --color-rust: #a8421c;
+    --color-rust-deep: #6b2810;
+    --color-rust-pale: #f5e1d8;
+    --color-amber-pale: #f5ebd8;
+    --color-amber-deep: #6b4a10;
+    --color-olive-pale: #e8ebd6;
+    --color-olive-deep: #3d441a;
+    --color-rule: #d3ccb9;
+    --color-rule-soft: #edebdd;
 
-    /* Typography */
-    --font-display: "Fraunces", Georgia, serif;
-    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    /* Typography — note the "Variable" suffix matches fontsource's family names */
+    --font-display: "Fraunces Variable", Georgia, serif;
+    --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
 }
-
-/* ─── Web fonts ──────────────────────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 /* ─── Base styles ────────────────────────────────────────────────────── */
 html {
