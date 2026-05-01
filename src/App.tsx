@@ -1,122 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import type { FC } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: FC = () => {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="min-h-screen px-8 py-12">
+      <div className="max-w-3xl mx-auto">
+        <p className="font-mono text-xs uppercase tracking-widest text-ink-faint mb-3">
+          Odyssey Therapeia · style test · v0.1
+        </p>
+        <h1 className="text-6xl font-normal tracking-tight leading-none mb-3">
+          Resume <em className="text-rust font-normal">Advisor</em>
+        </h1>
+        <p className="text-base text-ink-muted italic">
+          If you're reading this in Fraunces serif on a warm paper background
+          with a rust accent on "Advisor" — Tailwind is wired up correctly.
+        </p>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <div className="mt-12 grid grid-cols-3 gap-4">
+          <div className="bg-paper-warm border border-rule p-6">
+            <p className="font-mono text-xs uppercase tracking-widest text-ink-faint mb-2">
+              Color check
+            </p>
+            <p className="text-sm">
+              Inks, rust, paper — all rendering as design tokens.
+            </p>
+          </div>
+          <div className="bg-olive-pale border border-olive-deep/30 p-6">
+            <p className="font-mono text-xs uppercase tracking-widest text-olive-deep mb-2">
+              Olive variant
+            </p>
+            <p className="text-sm text-olive-deep">
+              For matched keywords later.
+            </p>
+          </div>
+          <div className="bg-rust-pale border border-rust p-6">
+            <p className="font-mono text-xs uppercase tracking-widest text-rust-deep mb-2">
+              Rust variant
+            </p>
+            <p className="text-sm text-rust-deep">For honesty flags later.</p>
+          </div>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </div>
+    </div>
+  );
+};
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
-}
-
-export default App
+export default App;
