@@ -1,8 +1,11 @@
 @import "tailwindcss";
 @import "@fontsource-variable/fraunces";
 @import "@fontsource-variable/jetbrains-mono";
+@import "tw-animate-css";
 
-/* ─── Design tokens — editorial aesthetic ──────────────────────────── */
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Editorial design tokens (primary source of truth) ──────────────── */
 @theme {
     /* Color palette */
     --color-paper: #f1ede4;
@@ -20,9 +23,65 @@
     --color-rule: #d3ccb9;
     --color-rule-soft: #edebdd;
 
-    /* Typography — note the "Variable" suffix matches fontsource's family names */
+    /* Typography — fontsource family names include the "Variable" suffix */
     --font-display: "Fraunces Variable", Georgia, serif;
     --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+}
+
+/* ─── shadcn semantic tokens, mapped to editorial palette ──────────────
+ * shadcn primitives (Button, Card, Badge) reference these via Tailwind
+ * classes like `bg-background`, `text-foreground`, `border-border`.
+ * Pointing them at our editorial tokens means primitives inherit our
+ * palette without needing per-usage overrides.
+ *
+ * No dark-mode block — the editorial aesthetic is light only for V1.
+ */
+:root {
+    --background: var(--color-paper);
+    --foreground: var(--color-ink);
+    --card: var(--color-paper-warm);
+    --card-foreground: var(--color-ink);
+    --popover: var(--color-paper-warm);
+    --popover-foreground: var(--color-ink);
+    --primary: var(--color-ink);
+    --primary-foreground: var(--color-paper);
+    --secondary: var(--color-paper-warm);
+    --secondary-foreground: var(--color-ink);
+    --muted: var(--color-rule-soft);
+    --muted-foreground: var(--color-ink-muted);
+    --accent: var(--color-rust);
+    --accent-foreground: var(--color-paper);
+    --destructive: var(--color-rust);
+    --destructive-foreground: var(--color-paper);
+    --border: var(--color-rule);
+    --input: var(--color-rule);
+    --ring: var(--color-rust);
+    --radius: 0; /* Sharp corners — editorial aesthetic */
+}
+
+/* ─── Tailwind v4 inline theme — bind shadcn classes to our variables ── */
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --radius-sm: var(--radius);
+    --radius-md: var(--radius);
+    --radius-lg: var(--radius);
 }
 
 /* ─── Base styles ────────────────────────────────────────────────────── */
