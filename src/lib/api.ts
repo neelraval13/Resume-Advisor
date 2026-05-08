@@ -1,5 +1,5 @@
 /**
- * Typed API client for the Resume Advisor backend.
+ * Typed API client for the Jogen backend.
  *
  * All HTTP calls go through `apiFetch()`, which:
  *   - prepends the API URL from config

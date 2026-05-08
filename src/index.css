@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "@fontsource-variable/fraunces";
 @import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/eb-garamond";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -23,8 +24,9 @@
     --color-rule: #d3ccb9;
     --color-rule-soft: #edebdd;
 
-    /* Typography — fontsource family names include the "Variable" suffix */
+    /* Typography */
     --font-display: "Fraunces Variable", Georgia, serif;
+    --font-heading: "EB Garamond Variable", Georgia, serif;
     --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
 }
 

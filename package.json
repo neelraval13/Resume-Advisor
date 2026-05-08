@@ -1,7 +1,8 @@
 {
-  "name": "resume-advisor",
+  "name": "jogen",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Tailored resume advice from Claude",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,6 +13,7 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
+    "@fontsource-variable/eb-garamond": "^5.2.7",
     "@fontsource-variable/fraunces": "^5.2.9",
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/noto-sans": "^5.2.10",

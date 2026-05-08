@@ -69,11 +69,11 @@ const App: FC = () => {
   return (
     <Layout>
       <header className="mb-12">
-        <h1 className="text-6xl font-normal tracking-tight leading-none mb-2">
-          Resume <em className="text-rust font-normal">Advisor</em>
+        <h1 className="font-heading text-6xl font-normal tracking-tight leading-none mb-2">
+          <em className="text-rust font-normal">Jogen</em>
         </h1>
         <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">
-          Tailoring advice from Claude · Odyssey Therapeia
+          Tailoring advice from Claude
         </p>
       </header>
 
@@ -102,7 +102,7 @@ const App: FC = () => {
             <Button
               onClick={runAnalyze}
               disabled={!canAnalyze(state)}
-              className="font-mono text-xs uppercase tracking-widest rounded-none bg-ink text-paper hover:bg-rust px-8 py-6 text-sm disabled:opacity-30 disabled:cursor-not-allowed"
+              className="font-mono text-sm uppercase tracking-widest rounded-none bg-ink text-paper hover:bg-rust px-8 py-6 text-sm disabled:opacity-30 disabled:cursor-not-allowed"
             >
               Analyze
             </Button>
