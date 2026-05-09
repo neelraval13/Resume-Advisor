@@ -12,11 +12,7 @@ type FullRewriteProps = {
 
 const FullRewrite: FC<FullRewriteProps> = ({ rewrite }) => {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="border-t border-rule-soft pt-2"
-    >
+    <Accordion className="border-t border-rule-soft pt-2">
       <AccordionItem value="rewrite" className="border-none">
         <AccordionTrigger className="font-mono text-xs uppercase tracking-widest text-ink-faint hover:no-underline py-4">
           <span className="text-left">
